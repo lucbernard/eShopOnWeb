@@ -9,7 +9,7 @@ resources:
           include:
           - v*
 
-name: Test Pipeline with main trigger
+name: Test Pipeline with release or tag trigger
 
 stages:
 - stage: Build
