@@ -8,7 +8,7 @@ By default, the project uses a real database. If you want an in memory database,
 var useOnlyInMemoryDatabase = true;
 ```
 
-# ADO Pipelines
+# ADO Pipelinesss
 Located under the folder ".ado", you can find the following YAML pipelines:
 
 - **main-ci.yml** : Dotnet  CI pipeline. Build + Test + Publish. Upload artifacts for website and webapp bicep file.
