@@ -1,0 +1,30 @@
+name: Test Pipeline for branch policies
+
+trigger: none
+
+pool:
+  name: eShopOnWebSelfPool
+  demands: Agent.Name -equals eShopOnWebSelfAgent
+
+steps:
+- checkout: self
+  fetchDepth: 1  # Shallower clone to improve performance
+  persistCredentials: true
+- task: DotNetCoreCLI@2
+  displayName: Restore
+  inputs:
+    command: 'restore'
+    projects: '**/*.sln'
+    feedsToUse: 'select'
+
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    command: 'build'
+    projects: '**/*.sln'
+
+- task: DotNetCoreCLI@2
+  displayName: Test
+  inputs:
+    command: 'test'
+    projects: 'tests/UnitTests/*.csproj'
