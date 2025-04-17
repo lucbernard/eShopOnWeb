@@ -18,6 +18,6 @@ Located under the folder ".ado", you can find the following YAML pipelines:
 
 # Deployment options
 
-## Azure App Service single container for only WEB (TODO)
+## Azure App Service single container for only WEB
 Deployment of the Web solution works with the following settings:
 ![webapp container web](.images/webapp-container-web.png)
