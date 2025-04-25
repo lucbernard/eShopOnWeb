@@ -15,7 +15,10 @@ jobs:
 
       - name: Show current directory
         run: pwd
-      
+
       - name: Show current directory again
-        working-directory: ./Web
+        run: pwd       
+      
+      - name: Show current directory onceagain
+        working-directory: ./src/Web
         run: pwd
