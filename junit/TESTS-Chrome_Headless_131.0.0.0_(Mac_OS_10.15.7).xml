@@ -1,0 +1,653 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 131.0.0.0 (Mac OS 10.15.7)" package="" timestamp="2025-04-25T17:21:44" id="0" hostname="lucbernard.local" tests="285" errors="0" failures="0" time="0.28">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36"/>
+  </properties>
+  <testcase name="EventCommentStore should have initial values" time="0.015" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore"/>
+  <testcase name="EventCommentStore should load comments when store is enabled" time="0.007" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore"/>
+  <testcase name="EventCommentStore should not load comments when store is disabled" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore"/>
+  <testcase name="EventCommentStore should create an instance" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore"/>
+  <testcase name="EventCommentStore should reflect enabled/disabled when enabling/disabling" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore"/>
+  <testcase name="EventCommentStore should emit when requesting focus" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore"/>
+  <testcase name="EventCommentStore filters should be reset if it does not represent loaded events" time="0.005" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore filters"/>
+  <testcase name="EventCommentStore filters should show only matching comments applied filters" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore filters"/>
+  <testcase name="EventCommentStore filters should reset to default" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore filters"/>
+  <testcase name="EventCommentStore contextual comments should only show comments for registered context" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore contextual comments"/>
+  <testcase name="EventCommentStore contextual comments should all comments for all context for visibility mode all" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore contextual comments"/>
+  <testcase name="EventCommentStore contextual comments should only show comments for visible context" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore contextual comments"/>
+  <testcase name="EventCommentStore should clear all comments" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore"/>
+  <testcase name="EventCommentStore should allow selecting events/authors/attributes based on the comments" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore"/>
+  <testcase name="EventCommentStore should remove comments" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore"/>
+  <testcase name="EventCommentStore should count the number of comments and reflect on the empty state" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore"/>
+  <testcase name="EventCommentStore should only show comments for visible context" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventCommentStore"/>
+  <testcase name="CounterComponent shows dash when y is not set" time="0.005" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CounterComponent"/>
+  <testcase name="CounterComponent shows dash when x is not set" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CounterComponent"/>
+  <testcase name="CounterComponent shows x and y values" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CounterComponent"/>
+  <testcase name="CounterComponent gets created" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CounterComponent"/>
+  <testcase name="CounterComponent shows nothing when x and y are not set" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CounterComponent"/>
+  <testcase name="WorkOrderListEditComponent sets grid title from config with database localization token" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderListEditComponent defaults WorkOrder category filter on EventGrid" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderListEditComponent creates an EventGrid" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderListEditComponent forces WorkOrder category filter on EventGrid" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderListEditComponent gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderListEditComponent sets grid title from config with localization token" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderListEditComponent sets grid title from config" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderListEditComponent no title in split" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderListEditComponent defaults grid title when not specified" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderListEditComponent shows details after grid emits eventOpen" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderListEditComponent defaults full" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderListEditComponent cannot deactivate component if dirty" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="OperationListEditComponent defaults Operation category filter on EventGrid" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).OperationListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="OperationListEditComponent forces Operation category filter on EventGrid" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).OperationListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="OperationListEditComponent defaults full" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).OperationListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="OperationListEditComponent no title in split" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).OperationListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="OperationListEditComponent shows details after grid emits eventOpen" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).OperationListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="OperationListEditComponent defaults grid title when not specified" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).OperationListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="OperationListEditComponent sets grid title from config with localization token" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).OperationListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="OperationListEditComponent sets grid title from config" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).OperationListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="OperationListEditComponent sets grid title from config with database localization token" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).OperationListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="OperationListEditComponent cannot deactivate component if dirty" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).OperationListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="OperationListEditComponent creates an EventGrid" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).OperationListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="OperationListEditComponent gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).OperationListEditComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="HeaderComponent hide the help button when user use the navigation v1" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).HeaderComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="HeaderComponent show the help button when user use the navigation v2" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).HeaderComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="HeaderComponent show a help modal when button is clicked" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).HeaderComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="HeaderComponent gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).HeaderComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent should preset the content" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent prevent trying to save when content is empty" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent should initialize editForm with an empty content control" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent creating a reply should reply on an event comment" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent creating a reply">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent creating a reply should reply on an attribute value comment" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent creating a reply">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent creating should create a new event comment" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent creating">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent creating should create a new attribute value comment" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent creating">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent prevent trying to save when content is only whitespaces" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent should set commentReferenceProp when commentReference input is set" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent mark the form as not dirty on cancel" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent will try to save an event comment" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent editing should edit an attribute value comment" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent editing">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent editing should edit an event comment" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent editing">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent editing a reply should edit a reply on attribute value comment" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent editing a reply">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentComponent editing a reply should edit a reply on an event comment" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentComponent editing a reply">
+    <skipped/>
+  </testcase>
+  <testcase name="DocumentViewerStore viewer error" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore hide pdf viewer toolbar" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore auto-select first" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore deactivate pdf viewer tools" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore deactivate image viewer tools" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore empty data" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore default image viewer tools" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore default pdf viewer tools" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore initial values" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore create" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore navigate single document" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore view type image" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore hide image viewer toolbar" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore view type pdf" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="DocumentViewerStore navigate mutliple documents" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerStore"/>
+  <testcase name="CommentFilter gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentFilter">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentFilter apply filters to the store only when confirmed" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentFilter">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentFilter can select attributes/users/events sorted alphabetically based on what is in the store" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentFilter">
+    <skipped/>
+  </testcase>
+  <testcase name="CommentFilter can reset to default" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).CommentFilter">
+    <skipped/>
+  </testcase>
+  <testcase name="ShortNumberService returns 0 when called with not a number" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).ShortNumberService"/>
+  <testcase name="ShortNumberService converts big numbers" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).ShortNumberService"/>
+  <testcase name="ShortNumberService formats big numbers when requested" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).ShortNumberService"/>
+  <testcase name="ShortNumberService supports negative numbers" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).ShortNumberService"/>
+  <testcase name="ShortNumberService doesn't have decimal places by default" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).ShortNumberService"/>
+  <testcase name="ShortNumberService floors big numbers by default" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).ShortNumberService"/>
+  <testcase name="ShortNumberService doesn't floor big numbers when requested" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).ShortNumberService"/>
+  <testcase name="MessageService will use cache and do a single request when same translations keys are reused" time="0.004" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MessageService"/>
+  <testcase name="MessageService can request a single translation key" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MessageService"/>
+  <testcase name="MessageService can batch multiple translation key into a single request" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MessageService"/>
+  <testcase name="MessageService can deduplicate the same parameters in a single request" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MessageService"/>
+  <testcase name="MessageService will create 2 requests when delay is greater than the batch delay" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MessageService"/>
+  <testcase name="MessageService gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MessageService"/>
+  <testcase name="AttributeValueEditorStore dropdown limits" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore text limits" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore attribute type unsupported" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore combobox limits" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore number target range upper limit only" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore number limits" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore disable spec color by default" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore enable spec color" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore number target no limit" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore null value" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore number target range lower limit only" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore no spec" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore create" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="AttributeValueEditorStore initial values" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AttributeValueEditorStore"/>
+  <testcase name="tryParseTimeRangeValueString should default to new Date when now option isn't provided" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="tryParseTimeRangeValueString should support any casing for special value root" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="tryParseTimeRangeValueString should return current date for @now" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="tryParseTimeRangeValueString should return null for unknown special values" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="tryParseTimeRangeValueString should return null for invalid date strings" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="tryParseTimeRangeValueString should parse valid date strings" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="tryParseTimeRangeValueString should handle valid date strings with timezone offset" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="tryParseTimeRangeValueString should return null for null value" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="tryParseTimeRangeValueString should return start of week for @startOfWeek" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="tryParseTimeRangeValueString should return start of day for @startOfDay" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="tryParseTimeRangeValueString should return start of month for @startOfMonth" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="tryParseTimeRangeValueString should return start of year for @startOfYear" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="tryParseTimeRangeValueString offset handling show handle minute offsets" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString offset handling"/>
+  <testcase name="tryParseTimeRangeValueString offset handling should handle hour offsets" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString offset handling"/>
+  <testcase name="tryParseTimeRangeValueString offset handling should handle year offsets" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString offset handling"/>
+  <testcase name="tryParseTimeRangeValueString offset handling should handle day offsets" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString offset handling"/>
+  <testcase name="tryParseTimeRangeValueString offset handling should handle month offsets" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString offset handling"/>
+  <testcase name="tryParseTimeRangeValueString offset handling should handle week offsets" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString offset handling"/>
+  <testcase name="tryParseTimeRangeValueString should return null for empty value" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).tryParseTimeRangeValueString"/>
+  <testcase name="UserManagementEditComponent normal behavior saves with correct values when stepper sends a confirm" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditComponent normal behavior">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditComponent normal behavior request close after successful save" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditComponent normal behavior">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditComponent normal behavior launches request to close when stepper cancel is clicked" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditComponent normal behavior">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditComponent normal behavior sends a validation calls mode when stepping foward, but not backwards" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditComponent normal behavior">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditComponent normal behavior gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditComponent normal behavior">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditComponent creating gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditComponent creating">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditComponent creating shows appropriate page title" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditComponent creating">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditComponent validations gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditComponent validations">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditComponent validations prevent stepper navigation on error" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditComponent validations">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditComponent validations applies ValidationErrors from save to form" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditComponent validations">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditComponent editing shows appropriate page title" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditComponent editing">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditComponent editing gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditComponent editing">
+    <skipped/>
+  </testcase>
+  <testcase name="LocalizeService can translate multiple string" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizeService"/>
+  <testcase name="LocalizeService can translate empty multiple string" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizeService"/>
+  <testcase name="LocalizeService can translate a single string" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizeService"/>
+  <testcase name="LocalizeService keep null value for null token" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizeService"/>
+  <testcase name="LocalizeService translate database localization token" time="0.053" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizeService"/>
+  <testcase name="LocalizeService translate translation key" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizeService"/>
+  <testcase name="LocalizeService translate a mix of simple string, translation key and database localization token" time="0.053" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizeService"/>
+  <testcase name="LocalizeService localization tokens are translated using message service" time="0.053" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizeService"/>
+  <testcase name="LocalizeService gets created" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizeService"/>
+  <testcase name="LocalizeService localization tokens are translated using translation file" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizeService"/>
+  <testcase name="LocalizeService keep undefined value for undefined token" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizeService"/>
+  <testcase name="LocalizePipe translate database localization token" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizePipe">
+    <skipped/>
+  </testcase>
+  <testcase name="LocalizePipe translate translation key" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizePipe">
+    <skipped/>
+  </testcase>
+  <testcase name="LocalizePipe keep undefined value for undefined token" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizePipe">
+    <skipped/>
+  </testcase>
+  <testcase name="LocalizePipe keep null value for null token" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizePipe">
+    <skipped/>
+  </testcase>
+  <testcase name="LocalizePipe can translate a single string" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizePipe">
+    <skipped/>
+  </testcase>
+  <testcase name="LocalizePipe gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LocalizePipe">
+    <skipped/>
+  </testcase>
+  <testcase name="MegaMenuComponent show an empty state when there is not display to show" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MegaMenuComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="MegaMenuComponent gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MegaMenuComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="MegaMenuComponent show a dropdown to select a view when there is multiple views" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MegaMenuComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="MegaMenuComponent show a list of groups based on the selected view and group is selected" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MegaMenuComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="MegaMenuComponent show the name on top of items when there is 1 view and 1 group" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MegaMenuComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="MegaMenuComponent show the name on top of the list of groups when there is 1 view and multiple group" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MegaMenuComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="MegaMenuComponent emit view/group/item selection when item is clicked" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MegaMenuComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="MegaMenuComponent change groups when selected view changes and first group should be selected" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MegaMenuComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="MegaMenuComponent change list of items when selected view and group changes" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MegaMenuComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="MegaMenuComponent hide empty state when there is display to show" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MegaMenuComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="MegaMenuComponent show a list of items based on the selected view and group" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).MegaMenuComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderExecutionDetailsEventGridTabComponent should create" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderExecutionDetailsEventGridTabComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderExecutionDetailsEventGridTabComponent addBinding should bind to specified field for add" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderExecutionDetailsEventGridTabComponent addBinding">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderExecutionDetailsEventGridTabComponent addBinding should bind to approriate field for add based on context by default" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderExecutionDetailsEventGridTabComponent addBinding">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderExecutionDetailsEventGridTabComponent should return appropriate value for tiles context" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderExecutionDetailsEventGridTabComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderExecutionDetailsEventGridTabComponent filterBinding should bind to specified field for filter" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderExecutionDetailsEventGridTabComponent filterBinding">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderExecutionDetailsEventGridTabComponent filterBinding should bind to appropriate field for filter based on context by default" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderExecutionDetailsEventGridTabComponent filterBinding">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent has 0 pane" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent has 3 panes" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent can set width with string from prop" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent can set mode from prop" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent can set width with number from prop" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent defaults to closed" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent defaults width to 340px" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent has correct caption for drawer items" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent defaults mode to auto" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent has main content" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent pane selection selects first pane by default" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent pane selection">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent pane selection changes selected pane when another drawer item is clicked" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent pane selection">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent overlay mode shows content overlay when opened" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent overlay mode">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent overlay mode closes when overlay is clicked" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent overlay mode">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent auto mode doe not go into overlay mode on larger device" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent auto mode">
+    <skipped/>
+  </testcase>
+  <testcase name="SideDrawerComponent auto mode goes into overlay mode on smaller device" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).SideDrawerComponent auto mode">
+    <skipped/>
+  </testcase>
+  <testcase name="Rxjs Helpers queueWhile should not queue by default if the queue$ is asynchronous" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).Rxjs Helpers queueWhile"/>
+  <testcase name="Rxjs Helpers queueWhile should queue the source$ while the queue$ emits true" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).Rxjs Helpers queueWhile"/>
+  <testcase name="Rxjs Helpers finalizeWithValue should emits the last value on finalizer" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).Rxjs Helpers finalizeWithValue"/>
+  <testcase name="WorkOrderExecutionDetailsEventEditorTabComponent should create" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderExecutionDetailsEventEditorTabComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="LayoutAppComponent has a mega-menu and not a sidebar when user use the navigation v2" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LayoutAppComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="LayoutAppComponent has a sidebar and not a mega-menu when user use the navigation v1" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LayoutAppComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="LayoutAppComponent gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LayoutAppComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="LayoutAppComponent hide the mega-menu and the mega-menu-overlay when user click on the overlay" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LayoutAppComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="LayoutAppComponent show the mega-menu and the mega-menu-overlay when user toggle the navigation" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LayoutAppComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="LayoutAppComponent hide the mega-menu and the mega-menu-overlay by default" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).LayoutAppComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderExecutionDetailsInformationTabComponent should return operation when in that context" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderExecutionDetailsInformationTabComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderExecutionDetailsInformationTabComponent should return work order when in that context" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderExecutionDetailsInformationTabComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="WorkOrderExecutionDetailsInformationTabComponent should create" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).WorkOrderExecutionDetailsInformationTabComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="DocumentViewerComponent set input data" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="DocumentViewerComponent gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="DocumentViewerComponent initial values" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="DocumentViewerComponent embedded" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="DocumentViewerComponent fullscreen" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="DocumentViewerComponent set input config" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="DocumentViewerComponent set input selectedIndex" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="DocumentViewerComponent selectedIndex null, select first" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).DocumentViewerComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="EventDocumentStore should be sorted by name asc by default" time="0.01" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentStore"/>
+  <testcase name="EventDocumentStore with data" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentStore"/>
+  <testcase name="EventDocumentStore icon per document type" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentStore"/>
+  <testcase name="EventDocumentStore set open document" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentStore"/>
+  <testcase name="EventDocumentStore error state" time="0.002" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentStore"/>
+  <testcase name="EventDocumentStore create" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentStore"/>
+  <testcase name="EventDocumentStore grid config" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentStore"/>
+  <testcase name="EventDocumentStore initial values" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentStore"/>
+  <testcase name="EventDocumentStore set no document" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentStore"/>
+  <testcase name="EventDocumentStore without data" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentStore"/>
+  <testcase name="EventDocumentStore set unexisting document" time="0.001" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentStore"/>
+  <testcase name="NavigationStepperComponent enumerate each step with their corresponding state" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent show cancel on all steps" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent can disable the previous/next button" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent can prevent going to next step using observable by clicking the next button" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent can prevent going to previous step by clicking the enumerator" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent cannot navigate to previous step using previous button on first step" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent create steps and selected the first index" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent cannot skip backward steps on linear flow" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent cannot skip forward steps on linear flow" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent hide previous button on other step than the first one" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent can prevent going to next step by clicking the next button" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent can navigate to next step using next button" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent show previous button on other step than the first one" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent can prevent going to previous step using observable by clicking the previous button" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent show next button on other step than the last one" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent can prevent going to previous step using observable by clicking the enumerator" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent can navigate to previous step using previous button" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent cannot navigate to next step using next button on last step" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent show done step with a check mark" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent can prevent going to previous step by clicking the previous button" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent show optional step with corresponding text" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent enumerate each steps with their corresponding state classes" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent show confirm button on last step" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent can prevent going to next step by clicking the enumerator" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent notify for cancellation on click" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent can prevent going to next step using observable by clicking the enumerator" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent does not notify for confirmation on step that are not the last one" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationStepperComponent notify for confirmation on last step" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).NavigationStepperComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent forms support checking role marks form dirty" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent forms support">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent forms support checking role marks form touched" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent forms support">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent forms support changing form control value should update component value" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent forms support">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent forms support form is not dirty or touched intially" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent forms support">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent forms support gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent forms support">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent with data shows no result when filter has no result" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent with data">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent with data filters correctly" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent with data">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent with data has correct selected values" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent with data">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent with data checking role launches change event" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent with data">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent with data shows all roles available" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent with data">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent with data unchecking role launches change event" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent with data">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent with data gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent with data">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent no data gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent no data">
+    <skipped/>
+  </testcase>
+  <testcase name="UserManagementEditRolesSelectorComponent no data shows empty state in empty mode when no data" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).UserManagementEditRolesSelectorComponent no data">
+    <skipped/>
+  </testcase>
+  <testcase name="EventDocumentsComponent set input eventId" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentsComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="EventDocumentsComponent set input config" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentsComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="EventDocumentsComponent error state" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentsComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="EventDocumentsComponent open/close viewer" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentsComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="EventDocumentsComponent gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentsComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="EventDocumentsComponent displayMode list" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentsComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="EventDocumentsComponent initial values" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentsComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="EventDocumentsComponent displayMode embedded" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).EventDocumentsComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="AvatarComponent displays icon if one is specified" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AvatarComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="AvatarComponent displays icon as small by default" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AvatarComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="AvatarComponent displays icon in large size when requested" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AvatarComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="AvatarComponent should apply custom color style" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AvatarComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="AvatarComponent should set Tooltip as title when true" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AvatarComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="AvatarComponent should render avatar initials template" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AvatarComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="AvatarComponent should render question marks when initials are not provided" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AvatarComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="AvatarComponent gets created" time="0" classname="Chrome_Headless_131_0_0_0_(Mac_OS_10_15_7).AvatarComponent">
+    <skipped/>
+  </testcase>
+  <system-out>
+    <![CDATA[Chrome Headless 131.0.0.0 (Mac OS 10.15.7) WARN: 'Unknown special value: @unknown'
+,Chrome Headless 131.0.0.0 (Mac OS 10.15.7) WARN: 'Invalid date: [invalid-date]. Make sure it is in ISO format. Example: 2021-01-01T00:00:00.000Z'
+,Chrome Headless 131.0.0.0 (Mac OS 10.15.7) WARN: 'Invalid date: []. Make sure it is in ISO format. Example: 2021-01-01T00:00:00.000Z'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
