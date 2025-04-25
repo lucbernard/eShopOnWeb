@@ -1,0 +1,21 @@
+name: Show Current Directory
+
+on:
+  push:
+
+jobs:
+  print-directory:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Show current directory
+        run: pwd
+      
+      - name: Show current directory again
+        working-directory: ./Web
+        run: pwd
