@@ -1,16 +1,16 @@
 name: eShopOnWeb Ng Coverage Report
 
-#permissions:
-#  contents: read
-#  issues: read
-#  checks: write
-#  pull-requests: write
+permissions:
+  contents: write
+  issues: read
+  checks: write
+  pull-requests: write
 
 
-permissions: write-all
+#permissions: write-all
 
 on:
-  pull_request
+  push
 
 jobs:
   build:
