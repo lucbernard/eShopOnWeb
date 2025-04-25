@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set Output
-      id: set-ouput
+      id: set-output
       run: |
         "foo=Foo" >> $env:GITHUB_OUTPUT
         "bar=Bar" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
