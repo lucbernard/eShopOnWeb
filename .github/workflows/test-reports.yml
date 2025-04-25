@@ -1,0 +1,38 @@
+name: eShopOnWeb Ng Tests Report
+
+permissions:
+  contents: read
+  issues: read
+  checks: write
+  pull-requests: write
+
+on:
+  pull_request
+
+jobs:
+  build:
+
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+ #   - name: Setup .NET
+ #     uses: actions/setup-dotnet@v4
+ #     with:
+ #       dotnet-version: '8.0.x'
+ #       dotnet-quality: 'preview'
+
+#    - name: Build with dotnet
+#      run: dotnet build ./eShopOnWeb.sln --configuration Release
+    
+#    - name: Test with dotnet
+#      run: dotnet test ./eShopOnWeb.sln --configuration Release
+
+    - name: Test Report
+      uses: dorny/test-reporter@v2
+      if: always()    # run this step even if previous step failed
+      with:
+        name: JUnit Tests           # Name of the check run which will be created
+        path: ./junit/TESTS-*.xml    # Path to test results
+        reporter: jest-junit        # Format of test results
