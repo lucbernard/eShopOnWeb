@@ -10,7 +10,7 @@ name: eShopOnWeb Ng Coverage Report
 permissions: write-all
 
 on:
-  push
+  pull_request
 
 jobs:
   build:
