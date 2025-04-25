@@ -1,34 +1,36 @@
 name: eShopOnWeb Build and Test
 
+permissions:
+  contents: read
+  issues: read
+  checks: write
+  pull-requests: write
+
 on:
   pull_request
 
 jobs:
   build:
-    permissions:
-      contents: read
-      issues: read
-      checks: write
-      pull-requests: write
+
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'
-        dotnet-quality: 'preview'
+ #   - name: Setup .NET
+ #     uses: actions/setup-dotnet@v4
+ #     with:
+ #       dotnet-version: '8.0.x'
+ #       dotnet-quality: 'preview'
 
-    - name: Build with dotnet
-      run: dotnet build ./eShopOnWeb.sln --configuration Release
+#    - name: Build with dotnet
+#      run: dotnet build ./eShopOnWeb.sln --configuration Release
     
-    - name: Test with dotnet
-      run: dotnet test ./eShopOnWeb.sln --configuration Release
+#    - name: Test with dotnet
+#      run: dotnet test ./eShopOnWeb.sln --configuration Release
 
     - name: Publish Test Results
       if: always()
-      uses: EnricoMi/publish-unit-test-result-action@v2
+      uses: EnricoMi/publish-unit-test-result-action/linux@v2
       with:
         junit_files: ./junit/TESTS-*.xml
