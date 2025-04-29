@@ -17,22 +17,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
- #   - name: Setup .NET
- #     uses: actions/setup-dotnet@v4
- #     with:
- #       dotnet-version: '8.0.x'
- #       dotnet-quality: 'preview'
-
-#    - name: Build with dotnet
-#      run: dotnet build ./eShopOnWeb.sln --configuration Release
-    
-#    - name: Test with dotnet
-#      run: dotnet test ./eShopOnWeb.sln --configuration Release
 
     - name: Test Report
-      uses: phoenix-actions/test-reporting@v8
-      if: always()    # run this step even if previous step failed
+      uses: dorny/test-reporter@v2
+      if: success() || failure()    # run this step even if previous step failed
       with:
-        name: JUnit Tests           # Name of the check run which will be created
-        path: ./junit/TESTS-*.xml    # Path to test results
+        name: JEST Tests            # Name of the check run which will be created
+        path: ./junit/TEST-*.xml    # Path to test results
         reporter: jest-junit        # Format of test results
