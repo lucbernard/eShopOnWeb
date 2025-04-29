@@ -7,7 +7,7 @@ permissions:
   pull-requests: write
 
 on:
-  push
+  [push, pull_request]
 
 jobs:
   build:
