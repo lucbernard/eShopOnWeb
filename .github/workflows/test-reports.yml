@@ -29,10 +29,9 @@ jobs:
 #    - name: Test with dotnet
 #      run: dotnet test ./eShopOnWeb.sln --configuration Release
 
-    - name: Test Report
-      uses: phoenix-actions/test-reporting@v8
-      if: always()    # run this step even if previous step failed
+
+    - name: Publish Test Results
+      if: always()
+      uses: EnricoMi/publish-unit-test-result-action/linux@v2
       with:
-        name: JUnit Tests           # Name of the check run which will be created
-        path: ./junit/TESTS-*.xml    # Path to test results
-        reporter: jest-junit        # Format of test results
+        junit_files: ./junit/TESTS-*.xml
