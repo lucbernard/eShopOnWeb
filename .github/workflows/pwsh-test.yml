@@ -1,0 +1,23 @@
+name: eShopOnWeb Test Steps Outputs
+
+on:
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: pwsh
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set Output
+      id: set-output
+      run: |
+        "foo=Foo" >> $env:GITHUB_OUTPUT
+        "bar=Bar" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+    - name: Test outputs
+      run: |
+        Write-Host "foo: ${{steps.set-output.outputs.foo}}"
+        Write-Host "bar: ${{steps.set-output.outputs.bar}}" 
