@@ -17,6 +17,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
+
+    - name: Publish Test Results
+      if: always()
+      uses: EnricoMi/publish-unit-test-result-action/linux@v2
+      with:
+        junit_files: ./junit/FAILEDTESTS-*.xml
     
     - name: Publish Test Report
       uses: mikepenz/action-junit-report@v5
