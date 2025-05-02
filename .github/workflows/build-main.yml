@@ -12,6 +12,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: Echo
       run: echo "build-main"
+    - name: Create temp file
+      run: echo "Hello World" > temp.txt
 
   call-first-sub-workflow-passing-data:
     name: Call first sub-workflow passing data

@@ -12,7 +12,9 @@ outputs:
 runs:
   using: "composite"
   steps:
-    #- uses: actions/checkout@v4
+    - name: Test temp.txt file content
+      shell: bash
+      run: cat temp.txt
     - name: Set Greeting
       shell: bash
       run: echo "Hello $INPUT_WHO_TO_GREET."
