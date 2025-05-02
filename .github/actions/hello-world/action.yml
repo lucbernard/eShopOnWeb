@@ -12,6 +12,7 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - uses: actions/checkout@v4
     - name: Set Greeting
       shell: bash
       run: echo "Hello $INPUT_WHO_TO_GREET."
