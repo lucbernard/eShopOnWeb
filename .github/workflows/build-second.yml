@@ -1,0 +1,22 @@
+name: eShopOnWeb Test composite workflow Secondary
+
+on:
+  workflow_call:
+    inputs:
+      config-path:
+        required: true
+        type: string
+    secrets:
+      TOKEN:
+        required: true
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        run: echo "build-second"
+      - name: Inputs
+        run: echo "${{ inputs.config-path }}"
+      - name: Secrets
+        run: echo "${{ secrets.token }}"

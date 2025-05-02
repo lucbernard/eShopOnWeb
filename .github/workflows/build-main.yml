@@ -1,0 +1,21 @@
+name: eShopOnWeb Test composite workflow
+
+on:
+  push
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Echo
+      run: echo "build-main"
+
+  call-workflow-passing-data:
+    name: Call workflow passing data
+    uses: ./.github/workflows/build-second.yml
+    with:
+      config-path: "config-path-values"
+    secrets: inherit
