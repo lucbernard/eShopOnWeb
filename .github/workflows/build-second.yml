@@ -22,7 +22,7 @@ jobs:
         run: echo "${{ secrets.token }}"
       - name: Test action
         id: test-action
-        uses: ./.github/actions/hello-world.yml
+        uses: ./.github/actions/hello-world
         with:
           who-to-greet: "World"
       - name: Echo test action output
