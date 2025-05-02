@@ -13,9 +13,18 @@ jobs:
     - name: Echo
       run: echo "build-main"
 
-  call-workflow-passing-data:
-    name: Call workflow passing data
+  call-first-sub-workflow-passing-data:
+    name: Call first sub-workflow passing data
     uses: ./.github/workflows/build-second.yml
     with:
-      config-path: "config-path-values"
-    secrets: inherit
+      config-path: "config-path-values1"
+    secrets: inherit # to forward secrets to the called workflow
+    needs: setup
+
+  call-second-sub-workflow-passing-data:
+    name: Call second sub-workflow passing data
+    uses: ./.github/workflows/build-third.yml
+    with:
+      config-path: "config-path-values2"
+    secrets: inherit # to forward secrets to the called workflow
+    needs: setup
