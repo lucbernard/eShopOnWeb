@@ -15,6 +15,9 @@ runs:
     - name: Test temp.txt file content
       shell: bash
       run: cat temp.txt
+    - name: Test temp.txt file content
+      shell: bash
+      run: echo "Hello World from hello-world action" > hello.txt
     - name: Set Greeting
       shell: bash
       run: echo "Hello $INPUT_WHO_TO_GREET."

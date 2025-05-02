@@ -28,5 +28,7 @@ jobs:
         uses: ./.github/actions/hello-world
         with:
           who-to-greet: "Second"
+      - name: Test hello.txt file content
+        run: cat hello.txt
       - name: Echo test action output
         run: echo "${{ steps.test-action.outputs.random-number }}"
