@@ -23,15 +23,12 @@ jobs:
       - name: Create temp file
         run: echo "Hello World from second" > temp.txt
       - name: Checkout
-        run: echo "build-second"
+        run: echo "build-second force-rebuild-everything ${{ inputs.force-rebuild-everything }}"
 
       - name: Force rebuild everything
         if: ${{ inputs.force-rebuild-everything == '1' }}
         run: echo "force rebuild everything"
 
-      - name: Don't Force rebuild everything
-        if: ${{ inputs.force-rebuild-everything == '0' }}
-        run: echo "DONT force rebuildeverything"
       - name: Inputs
         run: echo "${{ inputs.config-path }}"
       - name: Secrets

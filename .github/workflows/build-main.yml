@@ -28,7 +28,7 @@ jobs:
     uses: ./.github/workflows/build-second.yml
     with:
       config-path: "config-path-values1"
-      force-rebuild-everything: inputs.force-rebuild-everything
+      force-rebuild-everything: $(inputs.force-rebuild-everything)
     secrets: inherit # to forward secrets to the called workflow
     needs: setup
 
