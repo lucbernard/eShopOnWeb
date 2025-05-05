@@ -1,7 +1,6 @@
 name: eShopOnWeb Test composite workflow
 
 on:
-  pull_request:
   push:
     branches:
       - main
@@ -35,6 +34,7 @@ jobs:
         echo "ref ${{ github.ref }}"
         echo "refname ${{ github.ref_name }}"
         echo "target plarform id: ${{vars.TARGET_PLATFORM_ID}}"
+        echo "fooval: ${{ env.FOO }}"
 
   call-first-sub-workflow-passing-data:
     name: Call first sub-workflow passing data
