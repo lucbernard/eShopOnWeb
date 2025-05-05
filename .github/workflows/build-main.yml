@@ -16,6 +16,9 @@ on:
         default: "0"
         type: string
 
+env:
+  FOO: "${{ vars.TARGET_PLATFORM_ID }}-foo"
+
 
 jobs:
   setup:
