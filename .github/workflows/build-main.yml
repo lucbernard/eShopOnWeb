@@ -1,7 +1,6 @@
 name: eShopOnWeb Test composite workflow
 
 on:
-  pull_request:
   push:
     branches:
       - main
