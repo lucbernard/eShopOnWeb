@@ -5,6 +5,9 @@ on:
   push:
     branches:
       - main
+      - release/*
+    tags:
+      - v*
   workflow_dispatch:
     inputs:
       force-rebuild-everything:
@@ -27,6 +30,7 @@ jobs:
         echo "head ref ${{ github.head_ref }}"
         echo "base ref ${{ github.base_ref }}"
         echo "ref ${{ github.ref }}"
+        echo "refname ${{ github.ref_name }}"
         echo "target plarform id: ${{vars.TARGET_PLATFORM_ID}}"
 
   call-first-sub-workflow-passing-data:
