@@ -1,6 +1,7 @@
 name: eShopOnWeb Test composite workflow
 
 on:
+  pull_request:
   push:
     branches:
       - main
@@ -21,7 +22,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Echo
-      run: echo "build-main ${{ inputs.force-rebuild-everything }}"
+      run: |
+        echo "build-main ${{ inputs.force-rebuild-everything }}"
+        echo "head ref ${{ github.head_ref }}"
+        echo "base ref ${{ github.base_ref }}"
+        echo "ref ${{ github.ref }}"
 
   call-first-sub-workflow-passing-data:
     name: Call first sub-workflow passing data
