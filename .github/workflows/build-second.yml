@@ -6,6 +6,11 @@ on:
       config-path:
         required: true
         type: string
+      force-rebuild-everything:
+        description: 'Force rebuild everything'
+        required: true
+        default: false
+        type: boolean
     secrets:
       TOKEN:
         required: true
@@ -19,6 +24,14 @@ jobs:
         run: echo "Hello World from second" > temp.txt
       - name: Checkout
         run: echo "build-second"
+
+      - name: Force rebuild everything
+        if: ${{ inputs.force-rebuild-everything == true }}
+        run: echo "force rebuild everything"
+
+      - name: Don't Force rebuild everything
+        if: ${{ inputs.force-rebuild-everything == false }}
+        run: echo "DONT force rebuildeverything"
       - name: Inputs
         run: echo "${{ inputs.config-path }}"
       - name: Secrets

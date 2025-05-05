@@ -1,7 +1,17 @@
 name: eShopOnWeb Test composite workflow
 
 on:
-  push
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      force-rebuild-everything:
+        description: 'Force rebuild everything'
+        required: true
+        default: false
+        type: boolean
+
 
 jobs:
   setup:
@@ -11,13 +21,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Echo
-      run: echo "build-main"
+      run: echo "build-main ${{ inputs.force-rebuild-everything }}"
 
   call-first-sub-workflow-passing-data:
     name: Call first sub-workflow passing data
     uses: ./.github/workflows/build-second.yml
     with:
       config-path: "config-path-values1"
+      force-rebuild-everything: ${{ inputs.force-rebuild-everything }}
     secrets: inherit # to forward secrets to the called workflow
     needs: setup
 
