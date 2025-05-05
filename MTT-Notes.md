@@ -1,4 +1,4 @@
-# App modifieddd
+# App modified
 For architecture simplicity (and problems related to deploy SQL on free subscriptions), inmemory database option is selected.
 
 
