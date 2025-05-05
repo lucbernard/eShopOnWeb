@@ -6,9 +6,9 @@ on:
       config-path:
         required: true
         type: string
-    secrets:
-      TOKEN:
-        required: true
+    # secrets:
+    #   TOKEN:
+    #     required: true
 
 jobs:
   setup:

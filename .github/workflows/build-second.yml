@@ -11,9 +11,6 @@ on:
         required: true
         default: "0"
         type: string
-    secrets:
-      TOKEN:
-        required: true
 
 jobs:
   setup:
