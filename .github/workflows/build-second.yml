@@ -11,6 +11,9 @@ on:
         required: true
         default: "0"
         type: string
+    secrets:
+      TOKEN:
+        required: true
 
 jobs:
   setup:
@@ -29,7 +32,7 @@ jobs:
       - name: Inputs
         run: echo "${{ inputs.config-path }}"
       - name: Secrets
-        run: echo "${{ secrets.token }}"
+        run: echo "${{ secrets.TOKEN }}"
       - name: Test action
         id: test-action
         uses: ./.github/actions/hello-world

@@ -19,6 +19,8 @@ jobs:
         run: echo "Hello World from third" > temp.txt
       - name: Checkout
         run: echo "build-third"
+      - name: Secrets
+        run: echo "${{ secrets.TOKEN }}"
       - name: Test action
         id: test-action
         uses: ./.github/actions/hello-world

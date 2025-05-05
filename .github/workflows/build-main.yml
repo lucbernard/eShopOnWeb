@@ -42,6 +42,8 @@ jobs:
     with:
       config-path: "config-path-values1"
       force-rebuild-everything: ${{inputs.force-rebuild-everything}}
+    secrets:
+      token: ${{ secrets.TOKEN }}
     needs: setup
 
   call-second-sub-workflow-passing-data:
