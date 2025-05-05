@@ -9,8 +9,8 @@ on:
       force-rebuild-everything:
         description: 'Force rebuild everything'
         required: true
-        default: false
-        type: boolean
+        default: "0"
+        type: string
     secrets:
       TOKEN:
         required: true
@@ -26,11 +26,11 @@ jobs:
         run: echo "build-second"
 
       - name: Force rebuild everything
-        if: ${{ inputs.force-rebuild-everything == true }}
+        if: ${{ inputs.force-rebuild-everything == '1' }}
         run: echo "force rebuild everything"
 
       - name: Don't Force rebuild everything
-        if: ${{ inputs.force-rebuild-everything == false }}
+        if: ${{ inputs.force-rebuild-everything == '0' }}
         run: echo "DONT force rebuildeverything"
       - name: Inputs
         run: echo "${{ inputs.config-path }}"
