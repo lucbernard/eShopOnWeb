@@ -29,6 +29,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Early exit
+      run: echo "No relevant changes, skipping job." && exit 0
     - name: Echo
       id: echo-test
 
