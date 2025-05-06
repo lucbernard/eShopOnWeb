@@ -14,6 +14,11 @@ on:
         required: true
         default: "0"
         type: string
+      early-exit:
+        description: 'Early exit'
+        required: true
+        default: "0"
+        type: string
 
 env:
   FOO: "${{ vars.TARGET_PLATFORM_ID }}-foo"
@@ -29,8 +34,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Early exit
-      run: echo "No relevant changes, skipping job." && exit 0
     - name: Echo
       id: echo-test
 
@@ -45,6 +48,7 @@ jobs:
         echo "foo2=${{ env.FOO }}" >> $GITHUB_OUTPUT
 
   call-first-sub-workflow-passing-data:
+    if: ${{ inputs.early-exit != '1' }}
     name: Call first sub-workflow passing data
     uses: ./.github/workflows/build-second.yml
     with:
@@ -57,6 +61,7 @@ jobs:
     needs: setup
 
   call-second-sub-workflow-passing-data:
+    if: ${{ inputs.early-exit != '1' }}
     name: Call second sub-workflow passing data
     uses: ./.github/workflows/build-third.yml
     with:
