@@ -6,6 +6,12 @@ on:
       config-path:
         required: true
         type: string
+      foo:
+        required: true
+        type: string
+      foo2:
+        required: true
+        type: string
       force-rebuild-everything:
         description: 'Force rebuild everything'
         required: true
@@ -30,7 +36,10 @@ jobs:
         run: echo "force rebuild everything"
 
       - name: Inputs
-        run: echo "${{ inputs.config-path }}"
+        run: |
+          echo config path "${{ inputs.config-path }}"
+          echo foo "${{ inputs.foo }}"
+          echo foo2 "${{ inputs.foo2 }}"
       - name: Secrets
         run: echo "${{ secrets.TOKEN }}"
       - name: Test action

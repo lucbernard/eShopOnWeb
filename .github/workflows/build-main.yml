@@ -23,10 +23,15 @@ jobs:
   setup:
     name: Setup
     runs-on: ubuntu-latest
+    outputs:
+      foo: ${{ env.FOO }}
+      foo2: ${{ steps.echo-test.outputs.foo2 }}
 
     steps:
     - uses: actions/checkout@v4
     - name: Echo
+      id: echo-test
+
       run: |
         echo "build-main ${{ inputs.force-rebuild-everything }}"
         echo "head ref ${{ github.head_ref }}"
@@ -35,6 +40,7 @@ jobs:
         echo "refname ${{ github.ref_name }}"
         echo "target plarform id: ${{vars.TARGET_PLATFORM_ID}}"
         echo "fooval: ${{ env.FOO }}"
+        echo "foo2=${{ env.FOO }}" >> $GITHUB_OUTPUT
 
   call-first-sub-workflow-passing-data:
     name: Call first sub-workflow passing data
@@ -42,6 +48,8 @@ jobs:
     with:
       config-path: "config-path-values1"
       force-rebuild-everything: ${{inputs.force-rebuild-everything}}
+      foo: ${{ needs.setup.outputs.foo }}
+      foo2: ${{ needs.setup.outputs.foo2 }}
     secrets:
       token: ${{ secrets.TOKEN }}
     needs: setup
