@@ -16,9 +16,9 @@ on:
         type: string
       early-exit:
         description: 'Early exit'
-        required: true
-        default: "0"
-        type: string
+        required: false
+        default: false
+        type: boolean
 
 env:
   FOO: "${{ vars.TARGET_PLATFORM_ID }}-foo"
@@ -39,6 +39,7 @@ jobs:
 
       run: |
         echo "build-main ${{ inputs.force-rebuild-everything }}"
+        echo "early-exit ${{ inputs.early-exit }}"
         echo "head ref ${{ github.head_ref }}"
         echo "base ref ${{ github.base_ref }}"
         echo "ref ${{ github.ref }}"
@@ -47,24 +48,51 @@ jobs:
         echo "fooval: ${{ env.FOO }}"
         echo "foo2=${{ env.FOO }}" >> $GITHUB_OUTPUT
 
-  call-first-sub-workflow-passing-data:
-    if: ${{ inputs.early-exit != '1' }}
-    name: Call first sub-workflow passing data
-    uses: ./.github/workflows/build-second.yml
-    with:
-      config-path: "config-path-values1"
-      force-rebuild-everything: ${{inputs.force-rebuild-everything}}
-      foo: ${{ needs.setup.outputs.foo }}
-      foo2: ${{ needs.setup.outputs.foo2 }}
-    secrets:
-      token: ${{ secrets.TOKEN }}
+  test-early-exit-one:
+    name: Test early exit one
+    runs-on: ubuntu-latest
     needs: setup
+    if: ${{ inputs.early-exit == '1' }}
+    steps:
+      - name: Early exit
+        run: echo "Early exit ! Val was '1' !"
 
-  call-second-sub-workflow-passing-data:
-    if: ${{ inputs.early-exit != '1' }}
-    name: Call second sub-workflow passing data
-    uses: ./.github/workflows/build-third.yml
-    with:
-      config-path: "config-path-values2"
-    secrets: inherit # to forward secrets to the called workflow
+  test-early-exit-two:
+    name: Test early exit two
+    runs-on: ubuntu-latest
     needs: setup
+    if: ${{ inputs.early-exit == 'true' }}
+    steps:
+      - name: Early exit
+        run: echo "Early exit 2. Val was 'true' !"
+
+  test-early-exit-three:
+    name: Test early exit three
+    runs-on: ubuntu-latest
+    needs: setup
+    if: ${{ inputs.early-exit == true }}
+    steps:
+      - name: Early exit
+        run: echo "Early exit 3. Val was true !"
+
+  # call-first-sub-workflow-passing-data:
+  #   if: ${{ inputs.early-exit != '1' }}
+  #   name: Call first sub-workflow passing data
+  #   uses: ./.github/workflows/build-second.yml
+  #   with:
+  #     config-path: "config-path-values1"
+  #     force-rebuild-everything: ${{inputs.force-rebuild-everything}}
+  #     foo: ${{ needs.setup.outputs.foo }}
+  #     foo2: ${{ needs.setup.outputs.foo2 }}
+  #   secrets:
+  #     token: ${{ secrets.TOKEN }}
+  #   needs: setup
+
+  # call-second-sub-workflow-passing-data:
+  #   if: ${{ inputs.early-exit != '1' }}
+  #   name: Call second sub-workflow passing data
+  #   uses: ./.github/workflows/build-third.yml
+  #   with:
+  #     config-path: "config-path-values2"
+  #   secrets: inherit # to forward secrets to the called workflow
+  #   needs: setup
