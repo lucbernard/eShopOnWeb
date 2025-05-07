@@ -66,6 +66,16 @@ jobs:
       - name: Early exit
         run: echo "Early exit 2. Val was 'true' !"
 
+
+  test-early-exit-four:
+    name: Test early exit four
+    runs-on: ubuntu-latest
+    needs: setup
+    if: ${{ inputs.early-exit == true }}
+    steps:
+      - name: Early exit
+        run: echo "Early exit 4. Val was true !"
+
   test-early-exit-three:
     name: Test early exit three
     runs-on: ubuntu-latest
