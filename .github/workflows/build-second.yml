@@ -60,4 +60,4 @@ jobs:
         run: echo "${{ steps.test-action.outputs.random-number }}"
       - name: Echo test action output
         id: echo-output
-        run: echo "hello='Hello from build-second!' >> $GITHUB_OUTPUT"
+        run: echo "hello='Hello from build-second!'" >> $GITHUB_OUTPUT
