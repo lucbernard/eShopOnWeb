@@ -17,7 +17,7 @@ on:
       early-exit:
         description: 'Early exit'
         required: false
-        default: false
+        default: 'false'
         type: boolean
 
 env:
