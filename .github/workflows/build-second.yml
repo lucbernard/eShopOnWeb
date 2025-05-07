@@ -20,9 +20,16 @@ on:
     secrets:
       TOKEN:
         required: true
+    outputs:
+      hello:
+        description: 'Hello output'
+        value: ${{ jobs.setup.outputs.hello }}
+
 
 jobs:
   setup:
+    outputs:
+      hello: ${{ steps.echo-output.outputs.hello }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -51,3 +58,6 @@ jobs:
         run: cat hello.txt
       - name: Echo test action output
         run: echo "${{ steps.test-action.outputs.random-number }}"
+      - name: Echo test action output
+        id: echo-output
+        run: echo "hello='Hello from build-second!' >> $env:GITHUB_OUTPUT"

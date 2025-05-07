@@ -6,6 +6,9 @@ on:
       config-path:
         required: true
         type: string
+      hello:
+        required: true
+        type: string
     # secrets:
     #   TOKEN:
     #     required: true
@@ -21,6 +24,8 @@ jobs:
         run: echo "build-third"
       - name: Secrets
         run: echo "${{ secrets.TOKEN }}"
+      - name: Hello value
+        run: echo "${{ inputs.hello }}"
       - name: Test action
         id: test-action
         uses: ./.github/actions/hello-world

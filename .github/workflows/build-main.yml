@@ -48,61 +48,62 @@ jobs:
         echo "fooval: ${{ env.FOO }}"
         echo "foo2=${{ env.FOO }}" >> $GITHUB_OUTPUT
 
-  test-early-exit-one:
-    name: Test early exit one
-    runs-on: ubuntu-latest
-    needs: setup
-    if: ${{ inputs.early-exit == '1' }}
-    steps:
-      - name: Early exit
-        run: echo "Early exit ! Val was '1' !"
-
-  test-early-exit-two:
-    name: Test early exit two
-    runs-on: ubuntu-latest
-    needs: setup
-    if: ${{ inputs.early-exit == 'true' }}
-    steps:
-      - name: Early exit
-        run: echo "Early exit 2. Val was 'true' !"
-
-
-  test-early-exit-four:
-    name: Test early exit four
-    runs-on: ubuntu-latest
-    needs: setup
-    if: ${{ inputs.early-exit == true }}
-    steps:
-      - name: Early exit
-        run: echo "Early exit 4. Val was true !"
-
-  test-early-exit-three:
-    name: Test early exit three
-    runs-on: ubuntu-latest
-    needs: setup
-    if: ${{ inputs.early-exit == 'false' }}
-    steps:
-      - name: Early exit
-        run: echo "Early exit 3. Val was 'false' !"
-
-  # call-first-sub-workflow-passing-data:
-  #   if: ${{ inputs.early-exit != '1' }}
-  #   name: Call first sub-workflow passing data
-  #   uses: ./.github/workflows/build-second.yml
-  #   with:
-  #     config-path: "config-path-values1"
-  #     force-rebuild-everything: ${{inputs.force-rebuild-everything}}
-  #     foo: ${{ needs.setup.outputs.foo }}
-  #     foo2: ${{ needs.setup.outputs.foo2 }}
-  #   secrets:
-  #     token: ${{ secrets.TOKEN }}
+  # test-early-exit-one:
+  #   name: Test early exit one
+  #   runs-on: ubuntu-latest
   #   needs: setup
+  #   if: ${{ inputs.early-exit == '1' }}
+  #   steps:
+  #     - name: Early exit
+  #       run: echo "Early exit ! Val was '1' !"
 
-  # call-second-sub-workflow-passing-data:
-  #   if: ${{ inputs.early-exit != '1' }}
-  #   name: Call second sub-workflow passing data
-  #   uses: ./.github/workflows/build-third.yml
-  #   with:
-  #     config-path: "config-path-values2"
-  #   secrets: inherit # to forward secrets to the called workflow
+  # test-early-exit-two:
+  #   name: Test early exit two
+  #   runs-on: ubuntu-latest
   #   needs: setup
+  #   if: ${{ inputs.early-exit == 'true' }}
+  #   steps:
+  #     - name: Early exit
+  #       run: echo "Early exit 2. Val was 'true' !"
+
+
+  # test-early-exit-four:
+  #   name: Test early exit four
+  #   runs-on: ubuntu-latest
+  #   needs: setup
+  #   if: ${{ inputs.early-exit == true }}
+  #   steps:
+  #     - name: Early exit
+  #       run: echo "Early exit 4. Val was true !"
+
+  # test-early-exit-three:
+  #   name: Test early exit three
+  #   runs-on: ubuntu-latest
+  #   needs: setup
+  #   if: ${{ inputs.early-exit == 'false' }}
+  #   steps:
+  #     - name: Early exit
+  #       run: echo "Early exit 3. Val was 'false' !"
+
+  call-first-sub-workflow-passing-data:
+    needs: setup
+    name: Call first sub-workflow passing data
+    uses: ./.github/workflows/build-second.yml
+    with:
+      config-path: "config-path-values1"
+      force-rebuild-everything: ${{inputs.force-rebuild-everything}}
+      foo: ${{ needs.setup.outputs.foo }}
+      foo2: ${{ needs.setup.outputs.foo2 }}
+    secrets:
+      token: ${{ secrets.TOKEN }}
+
+  call-second-sub-workflow-passing-data:
+    needs:
+      - setup
+      - call-first-sub-workflow-passing-data
+    name: Call second sub-workflow passing data
+    uses: ./.github/workflows/build-third.yml
+    with:
+      config-path: "config-path-values2"
+      hello: ${{ needs.call-first-sub-workflow-passing-data.outputs.hello }}
+    secrets: inherit # to forward secrets to the called workflow
