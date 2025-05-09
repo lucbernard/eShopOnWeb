@@ -9,11 +9,11 @@ on:
       - v*
   workflow_dispatch:
     inputs:
-      force-rebuild-everything:
+      forceRebuildEverything:
         description: 'Force rebuild everything'
-        required: true
-        default: "0"
-        type: string
+        required: false
+        default: false
+        type: boolean
       early-exit:
         description: 'Early exit'
         required: false
@@ -38,7 +38,6 @@ jobs:
       id: echo-test
 
       run: |
-        echo "build-main ${{ inputs.force-rebuild-everything }}"
         echo "early-exit ${{ inputs.early-exit }}"
         echo "head ref ${{ github.head_ref }}"
         echo "base ref ${{ github.base_ref }}"
@@ -46,6 +45,7 @@ jobs:
         echo "refname ${{ github.ref_name }}"
         echo "target plarform id: ${{vars.TARGET_PLATFORM_ID}}"
         echo "fooval: ${{ env.FOO }}"
+        echo "forceRebuildEverything: ${{ inputs.forceRebuildEverything }}"
         echo "foo2=${{ env.FOO }}" >> $GITHUB_OUTPUT
 
   # test-early-exit-one:
@@ -91,7 +91,7 @@ jobs:
     uses: ./.github/workflows/build-second.yml
     with:
       config-path: "config-path-values1"
-      force-rebuild-everything: ${{inputs.force-rebuild-everything}}
+      forceRebuildEverything: ${{ inputs.forceRebuildEverything }}
       foo: ${{ needs.setup.outputs.foo }}
       foo2: ${{ needs.setup.outputs.foo2 }}
     secrets:
