@@ -9,13 +9,15 @@ on:
       - v*
   workflow_dispatch:
     inputs:
+      requiredString:
+        description: 'Force rebuild everything'
+        required: true
+        type: string
       forceRebuildEverything:
         description: 'Force rebuild everything'
-        default: false
         type: boolean
       early-exit:
         description: 'Early exit'
-        default: false
         type: boolean
 
 env:
