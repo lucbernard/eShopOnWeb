@@ -11,7 +11,7 @@ on:
     inputs:
       forceRebuildEverything:
         description: 'Force rebuild everything'
-        required: false
+        required: true
         default: false
         type: boolean
       early-exit:
