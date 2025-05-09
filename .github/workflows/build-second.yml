@@ -49,6 +49,18 @@ jobs:
         if: ${{ inputs.forceRebuildEverything == '1' }}
         run: echo "force rebuild everything => '1'"
 
+      - name: Force rebuild everything4
+        if: ${{ inputs.forceRebuildEverything == false }}
+        run: echo "force rebuild everything => false"
+
+      - name: Force rebuild everything5
+        if: ${{ inputs.forceRebuildEverything == 'false' }}
+        run: echo "force rebuild everything => 'false'"
+
+      - name: Force rebuild everything6
+        if: ${{ inputs.forceRebuildEverything == '0' }}
+        run: echo "force rebuild everything => '0'"
+
       - name: Inputs
         run: |
           echo config path "${{ inputs.config-path }}"
