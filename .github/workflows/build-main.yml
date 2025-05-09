@@ -91,19 +91,19 @@ jobs:
     uses: ./.github/workflows/build-second.yml
     with:
       config-path: "config-path-values1"
-      forceRebuildEverything: ${{ inputs.forceRebuildEverything }}
+      forceRebuildEverything: ${{ inputs.forceRebuildEverything || false }}
       foo: ${{ needs.setup.outputs.foo }}
       foo2: ${{ needs.setup.outputs.foo2 }}
     secrets:
       token: ${{ secrets.TOKEN }}
 
-  call-second-sub-workflow-passing-data:
-    needs:
-      - setup
-      - call-first-sub-workflow-passing-data
-    name: Call second sub-workflow passing data
-    uses: ./.github/workflows/build-third.yml
-    with:
-      config-path: "config-path-values2"
-      hello: ${{ needs.call-first-sub-workflow-passing-data.outputs.hello }}
-    secrets: inherit # to forward secrets to the called workflow
+  # call-second-sub-workflow-passing-data:
+  #   needs:
+  #     - setup
+  #     - call-first-sub-workflow-passing-data
+  #   name: Call second sub-workflow passing data
+  #   uses: ./.github/workflows/build-third.yml
+  #   with:
+  #     config-path: "config-path-values2"
+  #     hello: ${{ needs.call-first-sub-workflow-passing-data.outputs.hello }}
+  #   secrets: inherit # to forward secrets to the called workflow

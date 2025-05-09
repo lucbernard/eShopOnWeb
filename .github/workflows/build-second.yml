@@ -31,7 +31,7 @@ jobs:
       hello: ${{ steps.echo-output.outputs.hello }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # - uses: actions/checkout@v4
       - name: Create temp file
         run: echo "Hello World from second" > temp.txt
       - name: EchoTest
