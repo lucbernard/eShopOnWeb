@@ -16,7 +16,6 @@ on:
         type: boolean
       early-exit:
         description: 'Early exit'
-        required: false
         default: false
         type: boolean
 
@@ -48,42 +47,42 @@ jobs:
         echo "forceRebuildEverything: ${{ inputs.forceRebuildEverything }}"
         echo "foo2=${{ env.FOO }}" >> $GITHUB_OUTPUT
 
-  # test-early-exit-one:
-  #   name: Test early exit one
-  #   runs-on: ubuntu-latest
-  #   needs: setup
-  #   if: ${{ inputs.early-exit == '1' }}
-  #   steps:
-  #     - name: Early exit
-  #       run: echo "Early exit ! Val was '1' !"
+  test-early-exit-one:
+    name: Test early exit one
+    runs-on: ubuntu-latest
+    needs: setup
+    if: ${{ inputs.forceRebuildEverything == '1' }}
+    steps:
+      - name: Early exit
+        run: echo "forceRebuildEverything ! Val was '1' !"
 
-  # test-early-exit-two:
-  #   name: Test early exit two
-  #   runs-on: ubuntu-latest
-  #   needs: setup
-  #   if: ${{ inputs.early-exit == 'true' }}
-  #   steps:
-  #     - name: Early exit
-  #       run: echo "Early exit 2. Val was 'true' !"
+  test-early-exit-two:
+    name: Test early exit two
+    runs-on: ubuntu-latest
+    needs: setup
+    if: ${{ inputs.forceRebuildEverything == 'true' }}
+    steps:
+      - name: Early exit
+        run: echo "forceRebuildEverything 2. Val was 'true' !"
 
 
-  # test-early-exit-four:
-  #   name: Test early exit four
-  #   runs-on: ubuntu-latest
-  #   needs: setup
-  #   if: ${{ inputs.early-exit == true }}
-  #   steps:
-  #     - name: Early exit
-  #       run: echo "Early exit 4. Val was true !"
+  test-early-exit-four:
+    name: Test early exit four
+    runs-on: ubuntu-latest
+    needs: setup
+    if: ${{ inputs.forceRebuildEverything == true }}
+    steps:
+      - name: Early exit
+        run: echo "forceRebuildEverything 4. Val was true !"
 
-  # test-early-exit-three:
-  #   name: Test early exit three
-  #   runs-on: ubuntu-latest
-  #   needs: setup
-  #   if: ${{ inputs.early-exit == 'false' }}
-  #   steps:
-  #     - name: Early exit
-  #       run: echo "Early exit 3. Val was 'false' !"
+  test-early-exit-three:
+    name: Test early exit three
+    runs-on: ubuntu-latest
+    needs: setup
+    if: ${{ inputs.forceRebuildEverything == 'false' }}
+    steps:
+      - name: Early exit
+        run: echo "Early exit 3. Val was 'false' !"
 
   call-first-sub-workflow-passing-data:
     needs: setup
