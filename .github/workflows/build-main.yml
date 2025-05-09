@@ -11,6 +11,7 @@ on:
     inputs:
       requiredString:
         description: 'Force rebuild everything'
+        default: 'foo'
         required: true
         type: string
       forceRebuildEverything:
