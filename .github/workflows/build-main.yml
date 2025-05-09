@@ -11,7 +11,6 @@ on:
     inputs:
       forceRebuildEverything:
         description: 'Force rebuild everything'
-        required: true
         default: false
         type: boolean
       early-exit:
@@ -48,7 +47,7 @@ jobs:
         echo "foo2=${{ env.FOO }}" >> $GITHUB_OUTPUT
 
   test-early-exit-one:
-    name: Test early exit one
+    name: Test early exit one (triggered when workflow_dispatch & input is checked)
     runs-on: ubuntu-latest
     needs: setup
     if: ${{ inputs.forceRebuildEverything == '1' }}
@@ -67,7 +66,7 @@ jobs:
 
 
   test-early-exit-four:
-    name: Test early exit four
+    name: Test early exit four (triggered when workflow_dispatch & input is checked)
     runs-on: ubuntu-latest
     needs: setup
     if: ${{ inputs.forceRebuildEverything == true }}

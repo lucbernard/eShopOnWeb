@@ -41,15 +41,15 @@ jobs:
         if: ${{ inputs.forceRebuildEverything == 'true' }}
         run: echo "force rebuild everything => 'true'"
 
-      - name: Force rebuild everything2
+      - name: Force rebuild everything2 (triggered when parent triggered by workflow_dispatch and input is cheked)
         if: ${{ inputs.forceRebuildEverything == true }}
         run: echo "force rebuild everything => true"
 
-      - name: Force rebuild everything3
+      - name: Force rebuild everything3 (triggered when parent triggered by workflow_dispatch and input is cheked)
         if: ${{ inputs.forceRebuildEverything == '1' }}
         run: echo "force rebuild everything => '1'"
 
-      - name: Force rebuild everything4
+      - name: Force rebuild everything4 (triggered when parent NOT triggered by workflow_dispatch AND when parent triggered by workflow_dispatch and input is uncheked)
         if: ${{ inputs.forceRebuildEverything == false }}
         run: echo "force rebuild everything => false"
 
@@ -57,7 +57,7 @@ jobs:
         if: ${{ inputs.forceRebuildEverything == 'false' }}
         run: echo "force rebuild everything => 'false'"
 
-      - name: Force rebuild everything6
+      - name: Force rebuild everything6 (triggered when parent triggered by workflow_dispatch and input is uncheked)
         if: ${{ inputs.forceRebuildEverything == '0' }}
         run: echo "force rebuild everything => '0'"
 
