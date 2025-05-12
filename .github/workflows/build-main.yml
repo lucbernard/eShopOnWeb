@@ -92,7 +92,8 @@ jobs:
     uses: ./.github/workflows/build-second.yml
     with:
       config-path: "config-path-values1"
-      forceRebuildEverything: ${{ inputs.forceRebuildEverything || false }}
+      #forceRebuildEverything: ${{ inputs.forceRebuildEverything || false }}
+      forceRebuildEverything: "1"
       foo: ${{ needs.setup.outputs.foo }}
       foo2: ${{ needs.setup.outputs.foo2 }}
     secrets:
