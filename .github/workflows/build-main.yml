@@ -47,57 +47,73 @@ jobs:
         echo "target plarform id: ${{vars.TARGET_PLATFORM_ID}}"
         echo "fooval: ${{ env.FOO }}"
         echo "forceRebuildEverything: ${{ inputs.forceRebuildEverything }}"
+        echo "mySecret: ${{ secrets.MY_TEST_SECRET }}"
         echo "foo2=${{ env.FOO }}" >> $GITHUB_OUTPUT
 
-  test-early-exit-one:
-    name: Test early exit one (triggered when workflow_dispatch & input is checked)
-    runs-on: ubuntu-latest
-    needs: setup
-    if: ${{ inputs.forceRebuildEverything == '1' }}
-    steps:
-      - name: Early exit
-        run: echo "forceRebuildEverything ! Val was '1' !"
+    - name: Test action
+      id: test-action
+      uses: ./.github/actions/hello-world
+      with:
+        who-to-greet: "Third"
+        my-secret: ${{ secrets.MY_TEST_SECRET }}
 
-  test-early-exit-two:
-    name: Test early exit two
-    runs-on: ubuntu-latest
-    needs: setup
-    if: ${{ inputs.forceRebuildEverything == 'true' }}
-    steps:
-      - name: Early exit
-        run: echo "forceRebuildEverything 2. Val was 'true' !"
+  # test-early-exit-one:
+  #   name: Test early exit one (triggered when workflow_dispatch & input is checked)
+  #   runs-on: ubuntu-latest
+  #   needs: setup
+  #   if: ${{ inputs.forceRebuildEverything == '1' }}
+  #   steps:
+  #     - name: Early exit
+  #       run: echo "forceRebuildEverything ! Val was '1' !"
+
+  # test-early-exit-two:
+  #   name: Test early exit two
+  #   runs-on: ubuntu-latest
+  #   needs: setup
+  #   if: ${{ inputs.forceRebuildEverything == 'true' }}
+  #   steps:
+  #     - name: Early exit
+  #       run: echo "forceRebuildEverything 2. Val was 'true' !"
 
 
-  test-early-exit-four:
-    name: Test early exit four (triggered when workflow_dispatch & input is checked)
-    runs-on: ubuntu-latest
-    needs: setup
-    if: ${{ inputs.forceRebuildEverything == true }}
-    steps:
-      - name: Early exit
-        run: echo "forceRebuildEverything 4. Val was true !"
+  # test-early-exit-four:
+  #   name: Test early exit four (triggered when workflow_dispatch & input is checked)
+  #   runs-on: ubuntu-latest
+  #   needs: setup
+  #   if: ${{ inputs.forceRebuildEverything == true }}
+  #   steps:
+  #     - name: Early exit
+  #       run: echo "forceRebuildEverything 4. Val was true !"
 
-  test-early-exit-three:
-    name: Test early exit three
-    runs-on: ubuntu-latest
-    needs: setup
-    if: ${{ inputs.forceRebuildEverything == 'false' }}
-    steps:
-      - name: Early exit
-        run: echo "Early exit 3. Val was 'false' !"
+  # test-early-exit-three:
+  #   name: Test early exit three
+  #   runs-on: ubuntu-latest
+  #   needs: setup
+  #   if: ${{ inputs.forceRebuildEverything == 'false' }}
+  #   steps:
+  #     - name: Early exit
+  #       run: echo "Early exit 3. Val was 'false' !"
 
-  call-first-sub-workflow-passing-data:
-    needs: setup
-    name: Call first sub-workflow passing data
-    uses: ./.github/workflows/build-second.yml
-    with:
-      config-path: "config-path-values1"
-      #forceRebuildEverything: ${{ inputs.forceRebuildEverything || false }}
-      forceRebuildEverything: "1"
-      foo: ${{ needs.setup.outputs.foo }}
-      foo2: ${{ needs.setup.outputs.foo2 }}
-    secrets:
-      token: ${{ secrets.TOKEN }}
+  # test-early-exit-five:
+  #   name: Test early exit five
+  #   runs-on: ubuntu-latest
+  #   needs: setup
+  #   if: ${{ inputs.forceRebuildEverything }}
+  #   steps:
+  #     - name: Early exit
+  #       run: echo "Early exit 5. Val was trueish !"
+
+  # call-first-sub-workflow-passing-data:
+  #   needs: setup
+  #   name: Call first sub-workflow passing data
+  #   uses: ./.github/workflows/build-second.yml
+  #   with:
+  #     config-path: "config-path-values1"
+  #     forceRebuildEverything: ${{ inputs.forceRebuildEverything || false }}
+  #     foo: ${{ needs.setup.outputs.foo }}
+  #     foo2: ${{ needs.setup.outputs.foo2 }}
+  #   secrets:
+  #     token: ${{ secrets.TOKEN }}
 
   # call-second-sub-workflow-passing-data:
   #   needs:

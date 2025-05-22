@@ -5,6 +5,8 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  my-secret:
+    description: 'My secret'
 outputs:
   random-number:
     description: "Random number"
@@ -23,7 +25,10 @@ runs:
       run: echo "Hello $INPUT_WHO_TO_GREET."
       env:
         INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
-
+    - name: Test secret
+      shell: bash
+      run: |
+        echo "shh, this is a secret: ${{ inputs.my-secret }}"
     - name: Random Number Generator
       shell: bash
       id: random-number-generator
